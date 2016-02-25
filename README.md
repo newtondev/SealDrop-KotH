@@ -37,4 +37,4 @@ You can find the installation steps here: [Installation Guide](https://github.co
 * [KiloSwiss](https://github.com/KiloSwiss) for the NoVoiceInChat script.
 * [infiSTAR](https://github.com/infiSTAR) for the help with the GlobalKillCounter.
 * [Sp4rkY](https://github.com/SPKcoding) for the help with misc stuff for KOTH.
-* [51N157RU5](https://github.com/51N157RU5) for Portuguese translation.
+* [|Nw| SiNiStRuS](https://github.com/51N157RU5) for Portuguese translation.
