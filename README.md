@@ -1,10 +1,17 @@
 <h1 align="center">SealDrop King of the Hill (KotH)</h1>
 <p align="center">
-    <a href="https://github.com/DeadP4xel/SealDrop-KOTH/wiki/Changelog">
-    <img src="http://storage.sealdrop.de/koth/koth_icon_version.png" alt="Changelog" />
+    <img src="https://img.shields.io/badge/version-v1.0-blue.svg" />
   </a>
-    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en_US">
-    <img src="http://storage.sealdrop.de/koth/koth_icon_license.png" alt="License" />
+    <img src="https://img.shields.io/badge/arma3-1.56-red.svg" />
+  </a>
+    <img src="https://img.shields.io/badge/extDB2-v70-yellow.svg" />
+  </a>
+    <img src="https://img.shields.io/badge/release-stable-orange.svg" />
+  </a>
+  </a>
+    <img src="https://img.shields.io/badge/license-CC--BY--NC--ND-4CB697.svg" />
+  </a>
+    <img src="https://img.shields.io/badge/support-support.sealdrop.de-green.svg" />
   </a>
 </p>
 SealDrop KOTH is the first OpenSource release of the successful KingOfTheHill Mission. SealDrop KOTH is a gamemode for Arma 3 where a team of players can fight against each other to earn XP and levels. 
