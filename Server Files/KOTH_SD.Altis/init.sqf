@@ -33,3 +33,5 @@ if(isServer) then {
 		uiSleep 590;
 	};
 };
+
+player addEventHandler ["respawn", {_this execVM "client\playerSpawned.sqf"}];
