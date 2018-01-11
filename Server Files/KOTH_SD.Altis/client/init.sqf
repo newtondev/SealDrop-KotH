@@ -127,3 +127,5 @@ switch(playerSide) do
         waitUntil{scriptDone _handle};
     };
 };
+
+player addEventHandler ["respawn", {_this execVM "client\playerSpawned.sqf"}];

@@ -1,6 +1,7 @@
 /*
   File: fn_onPlayerKilled.sqf
   Author: DeadP4xel
+  Edit: Relentless
 */
 private["_player","_killer","_killCounter"];
 disableSerialization;
@@ -17,6 +18,10 @@ if(_player isKindOf "Man") then {
 
 // KILLCOUNTER GLOBAL
 _killCounter = (side _killer) call {
+  // Avoid teamkills count as kill
+  if (_player isEqualTo _killer) exitWith{};
+  if ((faction _player) isEqualTo (faction _killer)) exitWith{};
+  
   if(_this isEqualTo west) exitWith {'sd_westCounterToServer'};
   if(_this isEqualTo opfor) exitWith {'sd_eastCounterToServer'};
   if(_this isEqualTo independent) exitWith {'sd_independentCounterToServer'};
@@ -26,13 +31,18 @@ if !(_killCounter isEqualTo '') then {
   publicVariableServer _killCounter;
 };
 
-// ADD KILL TO THE KILLER
-if(_killer != _player) then {
-  if((side _player) isEqualTo (side _killer)) exitWith {};
-  if(_killer isKindOf "Man") then {
-    sd_statsAddKillServer = [100,1,_killer];
-    publicVariableServer "sd_statsAddKillServer";
-  };
+// ADD KILL TO KILLER REMAKE
+if ((isPlayer _player && isPlayer _killer) && (_player != _killer)) then {
+   if (_killer isKindOf "Man") then {
+    if ((faction _player) != (faction _killer)) then {
+      sd_statsAddKillServer = [100,1,_killer];
+      publicVariableServer "sd_statsAddKillServer";
+    };
+   } else {
+    _crew = crew _killer;
+    {sd_statsAddKillServer = [100,1,_x];
+    publicVariableServer "sd_statsAddKillServer";} forEach _crew;
+   };
 };
 
 // AUTOMATIC PUNISH SYSTEM
